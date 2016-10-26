@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-laravel-facades",
-  "version": "0.0.1",
-  "description": "Generates array of used translation/configuration strings for laravel-js-facades library",
+  "version": "0.0.2",
+  "description": "Generates array of used translation/configuration strings for laravel-localization and laravel-config libraries",
   "repository": {
     "type": "git",
     "url": "https://github.com/thiagorb/babel-plugin-laravel-facades"
