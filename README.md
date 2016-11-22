@@ -9,6 +9,10 @@ npm install babel-plugin-laravel-facades
 ```
 ## Usage
 
+In the example below, there is a an app.js file, which uses the [laravel-localization](https://github.com/thiagorb/laravel-localization) and [laravel-config](https://github.com/thiagorb/laravel-config) modules for logging some stuff in the console. The app could be written in separated modules as well. The build file is just using browserify with babelify to build the app.js. It could also be used inside a gulp build.
+
+After running the script build.js, the file facades-data.json is generated.
+
 - app.js:
 	```
 	import Lang from 'laravel-localization';
@@ -49,11 +53,11 @@ npm install babel-plugin-laravel-facades
 	        ]
 	    })
 	    .bundle()
-	    .on('end', () => laravelJsFacadesInstance.write('messages.json'))
+	    .on('end', () => laravelJsFacadesInstance.write('facades-data.json'))
 	    .pipe(process.stdout);
 	```
 	
-- generated messages.json after running build.js:
+- generated facades-data.json after running build.js:
 	```
 	{"messages":["message key"],"configs":["config key"]}
 	```
